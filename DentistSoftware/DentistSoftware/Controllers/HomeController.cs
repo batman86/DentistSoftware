@@ -16,7 +16,7 @@ namespace DentistSoftware.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Hello Marc";
-
+            ViewBag.Message = "Hello Marc";
             return View();
         }
 
