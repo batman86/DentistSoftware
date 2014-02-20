@@ -207,6 +207,7 @@
     <Compile Include="MaterialTreatment.cs">
       <DependentUpon>Dentist.tt</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="opperation.cs">

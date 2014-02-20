@@ -21,14 +21,6 @@ namespace DentistSoftware
         public Nullable<int> ProdCompany { get; set; }
         public string ScaleType { get; set; }
         public Nullable<int> ReOrder { get; set; }
-        public Nullable<int> OpenBalance { get; set; }
-        public Nullable<decimal> SalePrice { get; set; }
-        public Nullable<int> TaxPerc { get; set; }
-        public string Photo { get; set; }
-        public Nullable<double> OBValue { get; set; }
-        public Nullable<decimal> CostPrice { get; set; }
-        public int Reserved { get; set; }
-        public int Available { get; set; }
-        public Nullable<int> Total { get; set; }
+        public string Note { get; set; }
     }
 }
