@@ -10,7 +10,7 @@ namespace DentistSoftware.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DentistEntities")
+            : base("DentistAdmin")
         {
         }
     }

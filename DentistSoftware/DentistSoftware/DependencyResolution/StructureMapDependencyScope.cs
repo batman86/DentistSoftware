@@ -118,14 +118,15 @@ namespace DentistSoftware.DependencyResolution
         /// </returns>
         protected override object DoGetInstance(Type serviceType, string key)
         {
-            if (string.IsNullOrEmpty(key))
-            {
-                return serviceType.IsAbstract || serviceType.IsInterface
-                           ? this.Container.TryGetInstance(serviceType)
-                           : this.Container.GetInstance(serviceType);
-            }
+            //if (string.IsNullOrEmpty(key))
+            //{
+            //    return serviceType.IsAbstract || serviceType.IsInterface
+            //               ? this.Container.TryGetInstance(serviceType)
+            //               : this.Container.GetInstance(serviceType);
+            //}
 
-            return this.Container.GetInstance(serviceType, key);
+            //return this.Container.GetInstance(serviceType, key);
+            return null;
         }
 
         #endregion
