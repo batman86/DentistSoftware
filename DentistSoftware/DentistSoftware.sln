@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DentistSoftware", "DentistSoftware\DentistSoftware.csproj", "{9A9D4278-7130-4305-BFB0-1F204AE8816E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B2329F21-826C-4936-917B-A90D0E859990} = {B2329F21-826C-4936-917B-A90D0E859990}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DentistSoftware.Domain", "DentistSoftware.Domain\DentistSoftware.Domain.csproj", "{B2329F21-826C-4936-917B-A90D0E859990}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +20,10 @@ Global
 		{9A9D4278-7130-4305-BFB0-1F204AE8816E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A9D4278-7130-4305-BFB0-1F204AE8816E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A9D4278-7130-4305-BFB0-1F204AE8816E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2329F21-826C-4936-917B-A90D0E859990}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2329F21-826C-4936-917B-A90D0E859990}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2329F21-826C-4936-917B-A90D0E859990}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2329F21-826C-4936-917B-A90D0E859990}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
