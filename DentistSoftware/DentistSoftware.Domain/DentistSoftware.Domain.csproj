@@ -30,8 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,7 +46,109 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivePatient.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Appointment.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetRole.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUser.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserClaim.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserLogin.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Clinic.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomMaterial.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="C__MigrationHistory.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DentistModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DentistModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DentistModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DentistModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DentistModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Image.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ImageCategory.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Material.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialTreatment.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="opperation.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patient.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PatientHistory.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PatientPayment.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentReceipt.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Prescription.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecivingItem.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Role.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Secretary.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Storage.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="suppcontact.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="supplier.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Treatment.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse.cs">
+      <DependentUpon>DentistModel.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BL\Abstract\" />
@@ -49,6 +158,32 @@
     <Folder Include="DAL\Concrete\" />
     <Folder Include="Entities\" />
     <Folder Include="ViewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="DentistModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DentistModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="DentistModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DentistModel.edmx</DependentUpon>
+      <LastGenOutput>DentistModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="DentistModel.edmx.diagram">
+      <DependentUpon>DentistModel.edmx</DependentUpon>
+    </None>
+    <None Include="DentistModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DentistModel.edmx</DependentUpon>
+      <LastGenOutput>DentistModel.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
