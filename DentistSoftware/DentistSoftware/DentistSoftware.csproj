@@ -39,6 +39,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0-beta1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0-beta1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.0.0-beta1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.0.0-beta1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
@@ -127,20 +143,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Core">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Owin">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Owin">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
@@ -174,140 +178,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActivePatient.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Appointment.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\StructuremapMvc.cs" />
-    <Compile Include="Clinic.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="CustomMaterial.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Dentist.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Dentist.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Dentist.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Dentist.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Dentist.edmx</DependentUpon>
-    </Compile>
     <Compile Include="DependencyResolution\IoC.cs" />
     <Compile Include="DependencyResolution\StructureMapDependencyResolver.cs" />
     <Compile Include="DependencyResolution\StructureMapDependencyScope.cs" />
-    <Compile Include="Doctor.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Image.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ImageCategory.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
     <Compile Include="Infrastructure\Structures.cs" />
-    <Compile Include="Material.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MaterialTreatment.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
+    <Compile Include="Migrations\201402202345416_New.cs" />
+    <Compile Include="Migrations\201402202345416_New.Designer.cs">
+      <DependentUpon>201402202345416_New.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="opperation.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Patient.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PatientHistory.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PatientPayment.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PaymentReceipt.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Prescription.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RecivingItem.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Role.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Secretary.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="Storage.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
-    <Compile Include="suppcontact.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
-    <Compile Include="supplier.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Treatment.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
-    <Compile Include="User.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Warehouse.cs">
-      <DependentUpon>Dentist.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Dentist.edmx.sql" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Dentist.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Dentist.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Dentist.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Dentist.edmx</DependentUpon>
-      <LastGenOutput>Dentist.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Dentist.edmx.diagram">
-      <DependentUpon>Dentist.edmx</DependentUpon>
-    </Content>
-    <Content Include="Dentist.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Dentist.edmx</DependentUpon>
-      <LastGenOutput>Dentist.cs</LastGenOutput>
-    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -358,6 +261,11 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201402202345416_New.resx">
+      <DependentUpon>201402202345416_New.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
